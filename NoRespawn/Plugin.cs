@@ -15,6 +15,7 @@ public class Plugin : Plugin<Config>
     {
         handlers = new EventHandlers();
         Exiled.Events.Handlers.Server.RespawningTeam += handlers.OnRespawningTeam;
+        Exiled.Events.Handlers.Map.SpawningTeamVehicle += handlers.SpawningTeamVehicle;
         Exiled.Events.Handlers.Map.AnnouncingNtfEntrance += handlers.AnnouncingNtfEntrance;
         base.OnEnabled();
     }
@@ -22,6 +23,7 @@ public class Plugin : Plugin<Config>
     public override void OnDisabled()
     {
         Exiled.Events.Handlers.Server.RespawningTeam -= handlers.OnRespawningTeam;
+        Exiled.Events.Handlers.Map.SpawningTeamVehicle -= handlers.SpawningTeamVehicle;
         Exiled.Events.Handlers.Map.AnnouncingNtfEntrance -= handlers.AnnouncingNtfEntrance;
         handlers = null;
         base.OnDisabled();

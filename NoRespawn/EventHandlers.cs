@@ -2,7 +2,6 @@
 using Exiled.API.Features;
 using Exiled.Events.EventArgs.Map;
 using Exiled.Events.EventArgs.Server;
-
 namespace NoRespawn;
 public class EventHandlers
 {
@@ -26,6 +25,11 @@ public class EventHandlers
         }
 
         Cassie.Clear();
+    }
+
+    public void SpawningTeamVehicle(SpawningTeamVehicleEventArgs ev)
+    {
+        ev.IsAllowed = false;
     }
 
     public void AnnouncingNtfEntrance(AnnouncingNtfEntranceEventArgs ev)
