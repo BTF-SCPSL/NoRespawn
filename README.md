@@ -12,6 +12,6 @@
 
 <div align="center">
   
-![Information](https://repobeats.axiom.co/api/embed/aa7588e5eac40914af302a99b6d146413eb22c41.svg "Repobeats analytics image")
+![Information](https://repobeats.axiom.co/api/embed/85a00d4b12ed2901702a2cd7221e49b382f66a99.svg "Repobeats analytics image")
 
 </div>
