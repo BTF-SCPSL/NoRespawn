@@ -1,42 +1,35 @@
 ﻿using PlayerRoles;
-using System;
 using Exiled.API.Features;
+using Exiled.Events.EventArgs.Map;
 using Exiled.Events.EventArgs.Server;
 
-namespace NoRespawn
+namespace NoRespawn;
+public class EventHandlers
 {
-    public class EventHandlers
+    public void OnRespawningTeam(RespawningTeamEventArgs ev)
     {
-        public void OnRespawningTeam(RespawningTeamEventArgs ev)
+        ev.IsAllowed = false;
+        
+        var teamFaction = ev.NextKnownTeam;
+
+        if (teamFaction == Faction.FoundationStaff)
         {
-            ev.IsAllowed = false;
-
-            var teamFaction = GetFaction(ev.NextKnownTeam);
-
-            if (teamFaction == Faction.FoundationStaff)
-            {
-                Log.Debug("Nine-Tailed Fox attempted to respawn but was prevented.");
-            }
-            else if (teamFaction == Faction.FoundationEnemy)
-            {
-                Log.Debug("Chaos Insurgency attempted to respawn but was prevented.");
-            }
-            else
-            {
-                Log.Debug($"An unknown team attempted to respawn: {ev.NextKnownTeam}.");
-            }
-
-            Cassie.Clear();
+            Log.Info("Nine-Tailed Fox attempted to respawn but was prevented.");
+        }
+        else if (teamFaction == Faction.FoundationEnemy)
+        {
+            Log.Info("Chaos Insurgency attempted to respawn but was prevented.");
+        }
+        else
+        {
+            Log.Info($"An unknown team attempted to respawn: {ev.NextKnownTeam}.");
         }
 
-        public void OnRespawnedTeam(RespawnedTeamEventArgs ev)
-        {
-            Cassie.Clear();
-        }
+        Cassie.Clear();
+    }
 
-        private Faction GetFaction(Faction nextKnownTeam)
-        {
-            throw new NotImplementedException();
-        }
+    public void AnnouncingNtfEntrance(AnnouncingNtfEntranceEventArgs ev)
+    {
+        ev.IsAllowed = false;
     }
 }
