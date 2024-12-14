@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("NoRespawn")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A plugin that allows you to disable MTF and CI arrivals.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Back To Future")]
 [assembly: AssemblyProduct("NoRespawn")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
