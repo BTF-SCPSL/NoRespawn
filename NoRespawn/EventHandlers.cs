@@ -23,8 +23,6 @@ public class EventHandlers
         {
             Log.Info($"An unknown team attempted to respawn: {ev.NextKnownTeam}.");
         }
-
-        Cassie.Clear();
     }
 
     public void SpawningTeamVehicle(SpawningTeamVehicleEventArgs ev)
@@ -33,6 +31,11 @@ public class EventHandlers
     }
 
     public void AnnouncingNtfEntrance(AnnouncingNtfEntranceEventArgs ev)
+    {
+        ev.IsAllowed = false;
+    }
+    
+    public void AnnouncingChaosEntrance(AnnouncingChaosEntranceEventArgs ev)
     {
         ev.IsAllowed = false;
     }
