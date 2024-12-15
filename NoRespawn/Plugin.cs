@@ -6,7 +6,7 @@ public class Plugin : Plugin<Config>
 {
     public override string Name => "NoRespawn";
     public override string Author => "Narin & reword by RomzyyTV";
-    public override Version Version => new Version(1, 0, 0);
+    public override Version Version => new Version(1, 1, 0);
     public override Version RequiredExiledVersion => new Version(9, 0, 0);
 
     private static EventHandlers handlers;
