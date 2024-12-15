@@ -36,4 +36,9 @@ public class EventHandlers
     {
         ev.IsAllowed = false;
     }
+    
+    public void AnnouncingChaosEntrance(AnnouncingChaosEntranceEventArgs ev)
+    {
+        ev.IsAllowed = false;
+    }
 }

@@ -17,6 +17,7 @@ public class Plugin : Plugin<Config>
         Exiled.Events.Handlers.Server.RespawningTeam += handlers.OnRespawningTeam;
         Exiled.Events.Handlers.Map.SpawningTeamVehicle += handlers.SpawningTeamVehicle;
         Exiled.Events.Handlers.Map.AnnouncingNtfEntrance += handlers.AnnouncingNtfEntrance;
+        Exiled.Events.Handlers.Map.AnnouncingChaosEntrance += handlers.AnnouncingChaosEntrance;
         base.OnEnabled();
     }
 
@@ -25,6 +26,7 @@ public class Plugin : Plugin<Config>
         Exiled.Events.Handlers.Server.RespawningTeam -= handlers.OnRespawningTeam;
         Exiled.Events.Handlers.Map.SpawningTeamVehicle -= handlers.SpawningTeamVehicle;
         Exiled.Events.Handlers.Map.AnnouncingNtfEntrance -= handlers.AnnouncingNtfEntrance;
+        Exiled.Events.Handlers.Map.AnnouncingChaosEntrance -= handlers.AnnouncingChaosEntrance;
         handlers = null;
         base.OnDisabled();
     }
