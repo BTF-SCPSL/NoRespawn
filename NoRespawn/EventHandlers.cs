@@ -2,6 +2,7 @@
 using Exiled.API.Features;
 using Exiled.Events.EventArgs.Map;
 using Exiled.Events.EventArgs.Server;
+
 namespace NoRespawn;
 public class EventHandlers
 {
