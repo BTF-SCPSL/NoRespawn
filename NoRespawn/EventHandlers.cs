@@ -14,15 +14,15 @@ public class EventHandlers
 
         if (teamFaction == Faction.FoundationStaff)
         {
-            Log.Info("Nine-Tailed Fox attempted to respawn but was prevented.");
+            Log.Debug("Nine-Tailed Fox attempted to respawn but was prevented.");
         }
         else if (teamFaction == Faction.FoundationEnemy)
         {
-            Log.Info("Chaos Insurgency attempted to respawn but was prevented.");
+            Log.Debug("Chaos Insurgency attempted to respawn but was prevented.");
         }
         else
         {
-            Log.Info($"An unknown team attempted to respawn: {ev.NextKnownTeam}.");
+            Log.Warn($"An unknown team attempted to respawn: {ev.NextKnownTeam}.");
         }
     }
 
