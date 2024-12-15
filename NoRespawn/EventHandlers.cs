@@ -23,8 +23,6 @@ public class EventHandlers
         {
             Log.Info($"An unknown team attempted to respawn: {ev.NextKnownTeam}.");
         }
-
-        Cassie.Clear();
     }
 
     public void SpawningTeamVehicle(SpawningTeamVehicleEventArgs ev)
